@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../static/css/Adminseance.css" type="text/css">
+<div class="contenu">
+    <div class="formulaire">
+        <h1>Veuillez remplir le formulaire ci-dessous pour effectuer des modifications!</h1>
+        <form action="/seance" method="post">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td><input type="hidden" name="idS" id="id_S"></td>
+                    </tr>
+                    <tr>
+                        <td><label for=""> Date:</label></td>
+                        <td><input type="date" placeholder=" Entrez une date" name="Date" id="DateS"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for=""> Horaire:</label></td>
+                        <td> <input type="time" placeholder=" Entrez une horaire" name="heure" id="heureS"></td>
+                    </tr>
+                </table>
+
+                <button type="submit" id="Valider"> Valider</button>
+                <a href="" id="modifier">Modifier</a>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="affichage">
+        <table id="tableS">
+            <h1>Résultat</h1>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Date:</td>
+                    <td>Horaire</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each donnees}}
+                <tr>
+                    <td>{{this.id_seance}}</td>
+                    <td>{{this.dateS}}</td>
+                    <td>{{this.horaireS}}</td>
+                    <td><a href="/seance/deleteS/{{this.id_seance}}" id="supprimer">Supprimer</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src=" ../static/js/Adminseance.js"></script>

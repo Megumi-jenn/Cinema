@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../static/css/cinema.css">
+ 
+<div class="container cinema">
+   <h1>My cinema+</h1>
+  <div class="sary">
+    {{#each donnees}}
+    <div class="item {{#ifCond this.id_film '==' 1  }}active{{/ifCond}}">
+      <a href="/reservation/{{this.id_film}}">
+        <img src="../static/img/{{this.id_film}}.jpg" alt="{{this.titre}}"/>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>

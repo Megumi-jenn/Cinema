@@ -1,0 +1,47 @@
+<div class="formulaire">
+    <h1>Veuillez remplir le formulaire ci-dessous pour effectuer des modifications!</h1>
+    <form action="/billet" method="post">
+        <fieldset>
+
+            <table>
+                <tr>
+                    <td>
+                        <input type="hidden" id="ID">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for=""> Matricule</label>
+                    </td>
+                    <td>
+                        <input type="number" name="matricl" id="matricl">
+                    </td>
+                </tr>
+            </table>
+            
+            <button type="submit" id="bouton"> Valider</button>
+            <a href="" id="modifier">Modifier</a>
+        </fieldset>
+    </form>
+</div>
+<div class="affichage">
+    <table id="tableB">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>matricule</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            {{#each donnees}}
+            <tr>
+                <td>{{this.id-billet}}</td>
+                <td>{{this.matricule}}</td>
+                <td><a href="/suppsbillet/{{this.id_billet}}" id="supprimer">Supprimer</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<script src=" ../static/js/billet.js"></script>

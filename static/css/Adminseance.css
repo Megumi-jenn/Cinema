@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: baka;
+    src: url("../static/Fonts/HARLOWSI.TTF");
+}
+.contenu {
+    background-image: url("../img/movie.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+
+.contenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 96, 97, 0.258);
+    z-index: 0.5;
+}
+
+h1 {
+    text-align: center;
+    padding-left:40px;
+    margin-top: 50px;
+    color: rgb(174, 253, 238);
+}
+
+fieldset {
+    padding-top:20px;
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    border: 2px solid rgb(240, 210, 93);
+    transform: translateX(200px);
+    background-color: rgba(223, 223, 217, 0.564);
+}
+
+label {
+    margin: 18px;
+    font-size: 1.4em;
+    padding-left: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+input::placeholder {
+    color: rgb(67, 52, 52);
+    font-size: 18px;
+}
+
+#valider{
+    margin: 10px;
+    font-size: 20px;
+    margin-left: 70px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#modifier {
+    text-decoration: none;
+    color: rgb(3, 0, 0);
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: rgb(240, 234, 234);
+}
+
+#supprimer {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(3, 0, 0);
+    font-weight: lighter;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+:is(#valider,#modifier):hover{
+    background-color: rgba(81, 249, 184, 0.826);
+}
+#supprimer:hover{
+background-color: rgb(253, 122, 122);
+}
+
+#tableS {
+    border: 2px solid rgb(240, 210, 93);
+    border-radius: 5px;
+    width: 500px;
+    height: 350px;
+    margin-top: 50px;
+    transform: translateX(150px);
+    background-color: rgba(227, 226, 215, 0.564);
+}
+
+#tableS thead  td{
+font-family: baka;
+    font-size:1.5em;
+}
+
+#tableS td {
+    padding: 15px;
+    font-size: 20px;
+}
+

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+h1{
+    margin-left:500px;
+    align-items: center;
+    padding-top: 150px;
+    letter-spacing: 1px;
+}
+.contenu{
+    background-image: url("../img/film.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#supprimer{
+    border-radius: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 5px;
+    color: black;
+}
+
+#supprimer:hover{
+    background-color:rgba(249, 197, 197, 0.479);
+}
+
+#tableR{
+    border: 2px solid rgb(59, 59, 55);
+    margin-left:400px;
+    transform: translateX(150px);
+    border-radius:5px;
+    width: 850px;
+    margin-top: 50px;
+    height: 200px;
+    background-color: rgb(242, 247, 251);     
+}
+
+ #tableR th{
+    font-size: 20px;  
+} 
+ #tableR tbody td{
+    padding-left: 5px;
+}

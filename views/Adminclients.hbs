@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../static/css/Adminclient.css" type="text/css">
+
+<div class="contenu">
+    <div class="formulaire">
+<h1>Veuillez remplir le formulaire ci-dessous pour effectuer des modifications!</h1>
+        <form action="/clients" method="post">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="hidden" id="id_C" name="id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for=""> Nom :</label>
+                        </td>
+                        <td>
+                            <input type="text" placeholder=" Entrez un nom" id="nomC" name="nom">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for=""> Âge :</label>
+                        </td>
+                        <td>
+                            <input type="number" placeholder=" 0000000000000" id="ageC" name="age">
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" id="valider"> Valider</button>
+                <a href="" id="modifier"> Modifier </a>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="affichage">
+         <h1>Résultat</h1>
+        <table id="tableC">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nom</td>
+                    <td>Âge</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each donnees}}
+                <tr>
+                    <td>{{this.id_client}}</td>
+                    <td>{{this.nom}}</td>
+                    <td>{{this.age}}</td>
+                    <td><a href="/clients/delete/{{this.id_client}}" id="supprimer">Supprimer</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../static/js/Adminclient.js"></script>

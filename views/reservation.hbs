@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="../static/css/reservation.css" type="text/css">
+
+<div class="contenu">
+    <h1>MyCinema+</h1>
+    <h2>Réservation de séance pour le film : {{titre_film}}</h2>
+    <div id="reservation">
+        <form action="/reservation/{{id_film}}" method="post">
+            <fieldset>
+                <h4>Information Client</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <label> Nom: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="nomC" placeholder="Entrez votre nom" id="nomClient">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label> Âge: </label>
+                        </td>
+                        <td>
+                            <input type="number" name="ageC" placeholder="Entrez votre âge" id="ageClient">
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <h4>Information Salle</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <label> Nombre de chaise: </label>
+                        </td>
+                        <td>
+                            <input type="number" name="chaise" placeholder="Entrez le nombre de chaise" id="siege">
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <h4>Information horaire</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <label> Choix de la séance: </label>
+                        </td>
+                        <td>
+                            <select id="selection" name="choix_seance">
+                                {{#each donnees}}
+                                <option value="{{this.id_seance}}">{{this.horaireS}}</option>
+                                {{/each}}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <button type="submit" id="valider">Valider</button>
+
+            </fieldset>
+        </form>
+    </div>
+
+    
+</div>
+
+<script src="../static/js/reservation.js"></script>

@@ -1,0 +1,49 @@
+ <link rel="stylesheet" href="../static/css/Adminfilms.css" type="text/css">
+ 
+ <div class="contenu"> 
+ <div class="formulaire">
+     <h1>Veuillez remplir le formulaire ci-dessous pour effectuer des modifications!</h1>
+    <form action="/films" method="post">
+        <fieldset>
+            <table>
+                <tr>
+                    <td><input type="hidden" name="idF"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for=""> Titre:</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder=" Entrez un titre" name="title" id="title">
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" id="bouton"> Valider</button>
+            <a href="" id="modifier">Modifier</a>
+        </fieldset>
+    </form>
+</div>
+
+<div class="affichage">
+    <table id="tableF">
+        <h1>Résultat</h1>
+        <thead>
+            <tr>
+                <td>Id</td>
+                 <td>Titre</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {{#each donnees}}
+            <tr>
+                <td>{{this.id_film}}</td>
+                <td>{{this.titre}}</td>
+                <td><a href="/films/delete/{{this.id_film}}" id="supprimer">Supprimer</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+</div>
+<script src="../static/js/Adminfilm.js"></script>
