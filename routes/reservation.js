@@ -27,14 +27,14 @@ app.get("/:idS", (req, res) => {
 });
 
 //recupère l'id de la page client
-app.get("/:idC", (req, res) => {
+/* app.get("/:idC", (req, res) => {
   model.client(req.params.idC, (data) => {
     res.render("reservation", {
       id_client: req.params.idC,
       donnees: data
     });
   });
-});
+}); */
 
 app.get("/", (req, res) => {
    model.listeR((data) => {
@@ -44,13 +44,13 @@ app.get("/", (req, res) => {
 }); 
 });
 
-app.post("/:idR", (req, res) => {
+/* app.post("/:idR", (req, res) => {
   model.createC(req.body.nomC,req.body.ageC,(idClient) => {
     model.createR(idClient, req.body.chaise, () => {
       res.redirect("/reservation");
     }); 
   });
-});
+}); */
 
 
 app.get("/deleteR/:id", (req, res) => {
