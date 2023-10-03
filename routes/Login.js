@@ -4,7 +4,7 @@ const path = require("path");
 const config = require("../config");
 const model = require("../models/Login");
 
-app.get("/login", (req, res) => {
+app.get("/", (req, res) => {
     res.render("Login"); //res.render rend la page donc c'est son nom qu'on met dans la parenthèse
   });
 
