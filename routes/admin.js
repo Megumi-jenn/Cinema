@@ -51,7 +51,4 @@ router.get("/films", (req, res) => {
   });
 });
 
-// Ajoutez d'autres routes d'administration au besoin
-
 module.exports = router;
-*/

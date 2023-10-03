@@ -28,10 +28,11 @@ exports.jointure = (idS, callback) => {
   });
 };
 
+/*
 //relie client à reservation
 exports.client = (idC, callback) => {
   db.serialize(() => {
-    /* const querryC = "SELECT Client.nom,Client.age FROM Client INNER JOIN Reservation ON Client.id_client=Reservation.id_client" */
+    /* const querryC = "SELECT Client.nom,Client.age FROM Client INNER JOIN Reservation ON Client.id_client=Reservation.id_client" 
     const querryC = "SELECT * FROM Client INNER JOIN Reservation ON Client.id_client=Reservation.id_client WHERE Client.id_client = ?";
     db.all(querryC,
       [idC],
@@ -40,7 +41,8 @@ exports.client = (idC, callback) => {
         callback(rows);
       });
   });
-}
+} */
+
 
 //DEBUT CRUD RESERVATION
 exports.listeR = (callback) => {
@@ -55,7 +57,7 @@ exports.listeR = (callback) => {
       });
   });
 };
-
+/*
 //insertion de nouveau client
 exports.createC = (nom, age, callback) => {
   db.serialize(() => { //pour executer sequentiellement les opération
@@ -68,7 +70,7 @@ exports.createC = (nom, age, callback) => {
       }
       ); 
   });
-};
+};*/
 
 exports.createR = (idClient, siege, callback) => {
   db.serialize(() => {
